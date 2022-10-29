@@ -47,8 +47,8 @@ struct Hooks
 	static void Install()
 	{
 		logger::info("Installing hooks");
-		stl::write_thunk_call<Sky_UpdateAurora_HasValue_CurrentWeather>(REL::RelocationID(25689, 26236).address() + REL::Relocate(0x2D, 0x2E));
-		stl::write_thunk_call<Sky_UpdateAurora_HasValue_OutgoingWeather>(REL::RelocationID(25689, 26236).address() + REL::Relocate(0x48, 0x49));
+		stl::write_thunk_call<Sky_UpdateAurora_HasValue_CurrentWeather>(REL::RelocationID(25689, 26236, 0x1403C3A50).address() + REL::Relocate(0x2D, 0x2E, 0x3E));
+		stl::write_thunk_call<Sky_UpdateAurora_HasValue_OutgoingWeather>(REL::RelocationID(25689, 26236, 0x1403C3A50).address() + REL::Relocate(0x48, 0x49, 0x59));
 	}
 };
 
